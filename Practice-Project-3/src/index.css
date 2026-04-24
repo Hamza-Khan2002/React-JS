@@ -1,0 +1,14 @@
+@import "tailwindcss";
+@tailwindcss base;
+@tailwindcss componenets;
+@tailwindcss utilities;
+
+@layer base{
+    html,body{
+        @apply overflow-auto;
+    }
+    html::-webkit-scrollbar,
+    body::-webkit-scrollbar{
+        display:none;
+    }
+}
