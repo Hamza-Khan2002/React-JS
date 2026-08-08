@@ -292,7 +292,7 @@ function NavBar({ onNavigate }) {
           className="flex items-center gap- bg-transparent border-0 cursor-pointer p-0"
           onClick={() => go("home")}
         >
-          <img src="public/logo2.png" alt="4See Logo" className="h-18 w-30" />
+          <img src="/logo2.png" alt="4See Logo" className="h-18 w-30" />
         </button>
         <nav className="hidden md:flex items-center gap-8">
           {links.map((l) => (
