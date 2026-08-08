@@ -289,16 +289,10 @@ function NavBar({ onNavigate }) {
     >
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <button
-          className="flex items-center gap-2 bg-transparent border-0 cursor-pointer p-0"
+          className="flex items-center gap- bg-transparent border-0 cursor-pointer p-0"
           onClick={() => go("home")}
         >
-          <Eye size={22} color="#22d3ee" strokeWidth={2.4} />
-          <span
-            style={{ fontFamily: "'Space Grotesk', sans-serif" }}
-            className="text-lg font-bold tracking-tight text-white"
-          >
-            4See
-          </span>
+          <img src="public/logo2.png" alt="4See Logo" className="h-18 w-30" />
         </button>
         <nav className="hidden md:flex items-center gap-8">
           {links.map((l) => (
