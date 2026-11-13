@@ -3,6 +3,10 @@ import { Github, Linkedin, Mail, Twitter } from "lucide-react";
 
 import { Logo } from "./logo";
 
+const EMAIL = "connect4see@gmail.com";
+const SUBJECT = "Inquiry from 4See Portfolio";
+const BODY = "Hi 4See team,\n\nI'd like to talk about...";
+
 const SITEMAP = [
   { label: "Home", href: "#top" },
   { label: "Team", href: "#team" },
@@ -14,7 +18,7 @@ const SITEMAP = [
 
 /* [EDIT ME] real social + contact links */
 const SOCIALS = [
-  { label: "Email 4See", href: "mailto:hello@4see.dev", icon: Mail },
+  { label: "Email 4See", href: `https://mail.google.com/mail/?view=cm&fs=1&to=${EMAIL}&su=${encodeURIComponent(SUBJECT)}&body=${encodeURIComponent(BODY)}`, icon: Mail },
   { label: "4See on LinkedIn", href: "https://www.linkedin.com/company/4see-digital-agency/", icon: FaLinkedin },
   { label: "4See on Facebook", href: "https://facebook.com/profile.php?id=61595620587896", icon: FaFacebook },
   { label: "4See on Instagram", href: "https://instagram.com/4see.agency/", icon: FaInstagram },
@@ -31,6 +35,9 @@ export function SiteFooter() {
             <a
               key={link.label}
               href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-cursor={link.label}
               className="interactive text-sm text-muted-foreground hover:text-label"
             >
               {link.label}

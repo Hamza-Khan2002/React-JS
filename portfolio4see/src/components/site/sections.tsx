@@ -23,6 +23,10 @@ import { Button } from "@/components/ui/button";
 import { teamPhotos } from "@/lib/images";
 import { cn } from "@/lib/utils";
 
+const EMAIL = "connect4see@gmail.com";
+const SUBJECT = "Inquiry from 4See Portfolio";
+const BODY = "Hi 4See team,\n\nI'd like to talk about...";
+
 export function Eyebrow({ children, className }: { children: string; className?: string }) {
   return (
     <span
@@ -64,7 +68,7 @@ export function Hero() {
           <Reveal delay={240}>
             <div className="mt-9 flex flex-wrap items-center gap-3">
               <Button asChild variant="action" size="xl">
-                <a href="#contact" data-cursor="Let's talk">
+                <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=${EMAIL}&su=${encodeURIComponent(SUBJECT)}&body=${encodeURIComponent(BODY)}`} data-cursor="Let's talk" target="_blank" rel="noopener noreferrer">
                   Start a Project
                 </a>
               </Button>

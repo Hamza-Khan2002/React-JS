@@ -6,6 +6,10 @@ import { ThemeToggle } from "./theme-toggle";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
+const EMAIL = "connect4see@gmail.com";
+const SUBJECT = "Inquiry from 4See Portfolio";
+const BODY = "Hi 4See team,\n\nI'd like to talk about...";
+
 const LINKS = [
   { label: "Home", href: "#top" },
   { label: "Team", href: "#team" },
@@ -54,7 +58,7 @@ export function SiteNav() {
           <ThemeToggle />
           {/* Single site-wide CTA label */}
           <Button asChild variant="action" size="lg" className="hidden md:inline-flex">
-            <a href="#contact" data-cursor="Let's talk">
+            <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=${EMAIL}&su=${encodeURIComponent(SUBJECT)}&body=${encodeURIComponent(BODY)}`} data-cursor="Let's talk" target="_blank" rel="noopener noreferrer">
               Start a Project
             </a>
           </Button>
